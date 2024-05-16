@@ -7,6 +7,7 @@
 * DIP: Class uses convcrete implementations instead of interfaces.
 
 <br>
+
 ```
 class SystemManager {
     processOrder(order) {
@@ -109,6 +110,7 @@ class SystemManager {
 <br>
 **Dependency Inversion Principle (DIP): Using interfaces instead of concrete implementatios.**
 <br>
+
 ```
 interface PaymentProcessor {
     boolean process(double amount);
