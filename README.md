@@ -62,9 +62,10 @@ class SystemManager {
 ## Task 2:
 <br>
 **Single Responsability:** Creating different clasess / interfaces to manage specific funcitons.
-
+<br>
 **Open/Closed Principle (OCP):** Use a strategy pattern to handle different types of orders:
 <br>
+
 ```
 interface OrderProcessingStrategy {
     void process(Order order);
@@ -108,7 +109,9 @@ class SystemManager {
 }
 ```
 <br>
+
 **Dependency Inversion Principle (DIP): Using interfaces instead of concrete implementatios.**
+
 <br>
 
 ```
