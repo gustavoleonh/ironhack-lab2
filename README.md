@@ -8,7 +8,7 @@
 
 <br>
 
-```
+```java
 class SystemManager {
     processOrder(order) {
         if (order.type == "standard") {
@@ -66,7 +66,7 @@ class SystemManager {
 **Open/Closed Principle (OCP):** Use a strategy pattern to handle different types of orders:
 <br>
 
-```
+```java
 interface OrderProcessingStrategy {
     void process(Order order);
 }
@@ -114,7 +114,7 @@ class SystemManager {
 
 <br>
 
-```
+```java
 interface PaymentProcessor {
     boolean process(double amount);
 }
