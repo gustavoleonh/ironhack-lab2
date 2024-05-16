@@ -76,7 +76,7 @@ class StandardOrderProcessingStrategy implements OrderProcessingStrategy {
         verifyInventory(order);
         processStandardPayment(order);
         updateOrderStatus(order, "processed");
-        notifyCustomer(order);
+        notify(order);
     }
 }
 
@@ -85,7 +85,7 @@ class ExpressOrderProcessingStrategy implements OrderProcessingStrategy {
         verifyInventory(order);
         processExpressPayment(order, "highPriority");
         updateOrderStatus(order, "processed");
-        notifyCustomer(order);
+        notify(order);
     }
 }
 
@@ -140,7 +140,11 @@ interface DatabaseService {
 }
 
 interface Notifier {
-    void sendEmail(String email, String message);
+    void notify(Customer, String message);
+}
+
+class EmailNotifier implements Notifier(){
+	void notify(Customer, String message)
 }
 
 public class Order {
